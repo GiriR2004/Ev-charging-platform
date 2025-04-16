@@ -1,12 +1,13 @@
+import { History, Home, User, Zap } from 'lucide-react';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Home, Zap, History, User } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Usernavbar = () => {
     const location = useLocation();
   
     const navItems = [
       { path: '/user/home', name: 'Home', icon: Home },
+      { path: '/user/chatbot', name: 'chatbot', icon: Zap },
       { path: '/user/station-details', name: 'Station details', icon: Zap },
       { path: '/user/booking-history', name: 'bookings', icon: History },
       { path: '/user/profile', name: 'Profile', icon: User },
