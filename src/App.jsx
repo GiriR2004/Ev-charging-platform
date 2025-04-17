@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './components/Login';
-import Signup from './components/signup';
-import UserHome from './components/UserHome';
-import OwnerDashboard from './components/ownerHome';
-import OwnerNavbar from './components/Ownernavbar'; 
-import Profile from './components/Profile';
-import AddStation from './components/AddStation';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import supabase from '../SupabaseClient';
-import Bookings from './components/Bookings'; 
-import UserProfile from './components/UserProfile';
+import AddStation from './components/AddStation';
 import BookingHistory from './components/BookingHistory';
+import Bookings from './components/Bookings';
+import ChatBot from './components/ChatBot';
+import Login from './components/Login';
+import OwnerDashboard from './components/ownerHome';
+import OwnerNavbar from './components/Ownernavbar';
+import Profile from './components/Profile';
+import Signup from './components/signup';
 import StationDetails from './components/StationDetails';
+import UserHome from './components/UserHome';
 import Usernavbar from './components/Usernavbar';
-
+import UserProfile from './components/UserProfile';
 
 
 function ProtectedRoute({ children, allowedRole, redirectTo = '/login' }) {
@@ -86,6 +86,7 @@ function App() {
               <Route path="station-details/:stationId" element={<StationDetails />} />
               <Route path="booking-history" element={<BookingHistory />} />
               <Route path="profile" element={<UserProfile/>} />
+              <Route path="chatbot" element={<ChatBot />} />
           </Routes>
         </div>
       </div>

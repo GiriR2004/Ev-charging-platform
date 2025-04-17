@@ -12,6 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
     "@tailwindcss/vite": "^4.0.17",
+    "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.485.0",
